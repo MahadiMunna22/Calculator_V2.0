@@ -19,6 +19,7 @@ public class Converter extends AppCompatActivity {
         Feet = findViewById(R.id.FeetEditText);
         Inch = findViewById(R.id.InchEditText);
         //  Taka - Dollar1
+        //push again
         Taka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
