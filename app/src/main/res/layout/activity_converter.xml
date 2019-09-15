@@ -33,6 +33,7 @@
             android:text="Dollar"
             android:textSize="30sp" />
 
+
     </LinearLayout>
 
     <LinearLayout
@@ -120,5 +121,74 @@
             android:textSize="30sp" />
 
     </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/fer_cel_textView">
+
+        <TextView
+            android:id="@+id/celsiusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Celsius"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/fahrenheitTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fahrenheit"
+            android:textSize="30sp" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/celsiusFahrenheitEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/celsiusEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="30sp" />
+
+
+        <EditText
+            android:id="@+id/fahrenheitEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:text=""
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
