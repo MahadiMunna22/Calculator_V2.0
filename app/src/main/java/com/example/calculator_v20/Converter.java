@@ -7,8 +7,8 @@ import android.widget.EditText;
 
 public class Converter extends AppCompatActivity {
 
-    private EditText Taka,Dollar;
-    private String taka,dollar;
+    private EditText Taka,Dollar,Feet,Inch;
+    private String taka,dollar,feet,inch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +16,8 @@ public class Converter extends AppCompatActivity {
 
         Taka = findViewById(R.id.TakaEditText);
         Dollar = findViewById(R.id.DollerEditText);
-
+        Feet = findViewById(R.id.FeetEditText);
+        Inch = findViewById(R.id.InchEditText);
         //  Taka - Dollar
         Taka.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,32 @@ public class Converter extends AppCompatActivity {
                 }
             }
         });
+        //  Feet - Inch
+        Feet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                feet = Feet.getText().toString().trim();
+                try {
+                    Inch.setText((Double.parseDouble(feet)*12)+"");
+                } catch (NumberFormatException e) {
+
+                }
+
+            }
+        });
+        Inch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                inch = Inch.getText().toString().trim();
+                try {
+                    Feet.setText(String.format("%.2f",(Double.parseDouble(inch)/12)));
+                }
+                catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
 
     }
 }
