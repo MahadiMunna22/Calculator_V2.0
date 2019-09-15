@@ -7,16 +7,8 @@ import android.widget.EditText;
 
 public class Converter extends AppCompatActivity {
 
-    //******************************************
     private EditText Taka,Dollar;
     private String taka,dollar;
-    //*******************************************
-
-    //******************************************
-    private EditText celsiusEditText,fahrenheitEdittext;
-    private String celsiusString,fahrenheitString;
-    //************************************************
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +16,6 @@ public class Converter extends AppCompatActivity {
 
         Taka = findViewById(R.id.TakaEditText);
         Dollar = findViewById(R.id.DollerEditText);
-
-
 
         //  Taka - Dollar
         Taka.setOnClickListener(new View.OnClickListener() {
@@ -52,33 +42,6 @@ public class Converter extends AppCompatActivity {
                 }
             }
         });
-
-
-        //
-        celsiusEditText=findViewById(R.id.celsiusEditText);
-        fahrenheitEdittext=findViewById(R.id.fahrenheitEditText);
-        //
-
-        celsiusEditText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                celsiusString= String.valueOf(celsiusEditText.getText());
-
-                fahrenheitEdittext.setText(""+( Double.parseDouble(celsiusString)*9/5 +32 ));
-
-            }
-        });
-        fahrenheitEdittext.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fahrenheitString=String.valueOf((fahrenheitEdittext.getText()));
-                celsiusEditText.setText(""+ ( ( Double.parseDouble(fahrenheitString) -32 ) *5/9 ) );
-            }
-        });
-
-
-
-
 
     }
 }
