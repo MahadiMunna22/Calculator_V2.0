@@ -69,7 +69,6 @@ public class Converter extends AppCompatActivity {
                     Feet.setText(String.format("%.2f",(Double.parseDouble(inch)/12)));
                 }
                 catch (NumberFormatException e) {
-
                 }
             }
         });
