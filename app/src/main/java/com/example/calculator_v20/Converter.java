@@ -42,6 +42,5 @@ public class Converter extends AppCompatActivity {
                 }
             }
         });
-
     }
 }
