@@ -7,8 +7,8 @@ import android.widget.EditText;
 
 public class Converter extends AppCompatActivity {
 
-    private EditText Taka,Dollar,Feet,Inch,farhenheitEditText,celsiusEditText;
-    private String taka,dollar,feet,inch,ferhenheit,celsius;
+    private EditText Taka,Dollar,Feet,Inch,farhenheitEditText,celsiusEditText,Kg,Pound;
+    private String taka,dollar,feet,inch,ferhenheit,celsius,kg,pound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +20,8 @@ public class Converter extends AppCompatActivity {
         Inch = findViewById(R.id.InchEditText);
         farhenheitEditText=findViewById(R.id.fahrenheitEditText);
         celsiusEditText=findViewById(R.id.celsiusEditText);
+        Kg =findViewById(R.id.KgEditText);
+        Pound = findViewById(R.id.PoundEditText);
 
 
         //  Taka - Dollar1
@@ -102,6 +104,33 @@ public class Converter extends AppCompatActivity {
                 }
                 catch (NumberFormatException e) {
                 }
+            }
+        });
+
+        //kg--pound
+
+        Kg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                kg= Kg.getText().toString().trim();
+                try {
+                    Pound.setText((Double.parseDouble(kg)*2.20462)+"");
+                } catch (NumberFormatException e) {
+
+                }
+
+            }
+        });
+        Pound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pound = Pound.getText().toString().trim();
+                try {
+                    Kg.setText(String.format("%.2f",(Double.parseDouble(pound)/2.20462)));
+                } catch (NumberFormatException e) {
+
+                }
+
             }
         });
 
