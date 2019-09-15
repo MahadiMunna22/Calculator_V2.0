@@ -43,6 +43,11 @@ public class Converter extends AppCompatActivity {
                 }
             }
         });
+
+
+
+
+
         //  Feet - Inch
         Feet.setOnClickListener(new View.OnClickListener() {
             @Override
