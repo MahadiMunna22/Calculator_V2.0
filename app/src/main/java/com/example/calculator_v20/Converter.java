@@ -7,8 +7,8 @@ import android.widget.EditText;
 
 public class Converter extends AppCompatActivity {
 
-    private EditText Taka,Dollar,Feet,Inch;
-    private String taka,dollar,feet,inch;
+    private EditText Taka,Dollar,Feet,Inch,farhenheitEditText,celsiusEditText;
+    private String taka,dollar,feet,inch,ferhenheit,celsius;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,10 @@ public class Converter extends AppCompatActivity {
         Dollar = findViewById(R.id.DollerEditText);
         Feet = findViewById(R.id.FeetEditText);
         Inch = findViewById(R.id.InchEditText);
+        farhenheitEditText=findViewById(R.id.fahrenheitEditText);
+        celsiusEditText=findViewById(R.id.celsiusEditText);
+
+
         //  Taka - Dollar1
         //push again
         Taka.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +72,33 @@ public class Converter extends AppCompatActivity {
                 inch = Inch.getText().toString().trim();
                 try {
                     Feet.setText(String.format("%.2f",(Double.parseDouble(inch)/12)));
+                }
+                catch (NumberFormatException e) {
+                }
+            }
+        });
+
+
+        //  Celsius -Ferhenheit
+        farhenheitEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ferhenheit= String.valueOf(farhenheitEditText.getText());
+
+                try {
+                    celsiusEditText.setText(( (Double.parseDouble(ferhenheit)-32) *5/9)+"");
+                } catch (NumberFormatException e) {
+
+                }
+
+            }
+        });
+        celsiusEditText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                celsius =String.valueOf(celsiusEditText.getText());
+                try {
+                    farhenheitEditText.setText(( (Double.parseDouble(celsius)*9/5)+32)+"");
                 }
                 catch (NumberFormatException e) {
                 }
