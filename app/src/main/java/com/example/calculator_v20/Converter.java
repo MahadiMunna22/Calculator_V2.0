@@ -20,7 +20,7 @@ public class Converter extends AppCompatActivity {
         Inch = findViewById(R.id.InchEditText);
         farhenheitEditText=findViewById(R.id.fahrenheitEditText);
         celsiusEditText=findViewById(R.id.celsiusEditText);
-        Kg =findViewById(R.id.KgEditText);
+        Kg =findViewById(R.id.KgEditText) ;
         Pound = findViewById(R.id.PoundEditText);
 
 
