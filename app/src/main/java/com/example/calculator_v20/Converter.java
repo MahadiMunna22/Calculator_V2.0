@@ -34,7 +34,7 @@ public class Converter extends AppCompatActivity {
             public void onClick(View v) {
                 taka = Taka.getText().toString().trim();
                 try {
-                    Dollar.setText((Double.parseDouble(taka)/80)+"");
+                    Dollar.setText((Double.parseDouble(taka)/84.55)+"");
                 } catch (NumberFormatException e) {
 
                 }
@@ -46,7 +46,7 @@ public class Converter extends AppCompatActivity {
             public void onClick(View v) {
                 dollar = Dollar.getText().toString().trim();
                 try {
-                    Taka.setText((Double.parseDouble(dollar)*80)+"");
+                    Taka.setText((Double.parseDouble(dollar)*84.55)+"");
                 }
                 catch (NumberFormatException e) {
 
