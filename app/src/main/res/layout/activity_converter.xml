@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Taka"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/Doller"
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Dollar"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
 
     </LinearLayout>
@@ -51,7 +51,7 @@
             android:gravity="center"
             android:inputType="number"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
 
         <EditText
@@ -63,7 +63,7 @@
             android:gravity="center"
             android:inputType="number"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
     <LinearLayout
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/Feet"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:gravity="center"/>
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/Inch"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:layout_margin="8dp"
             android:layout_weight="1"
             android:gravity="center"/>
@@ -109,7 +109,7 @@
             android:gravity="center"
             android:inputType="number"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
 
         <EditText
@@ -121,7 +121,7 @@
             android:gravity="center"
             android:inputType="number"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 
@@ -144,7 +144,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Celsius"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/fahrenheitTextView"
@@ -154,7 +154,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="Fahrenheit"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
 
     </LinearLayout>
@@ -175,7 +175,7 @@
             android:gravity="center"
             android:inputType="number"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
 
         <EditText
@@ -187,7 +187,7 @@
             android:gravity="center"
             android:inputType="number"
             android:text=""
-            android:textSize="30sp" />
+            android:textSize="25sp" />
 
     </LinearLayout>
 
