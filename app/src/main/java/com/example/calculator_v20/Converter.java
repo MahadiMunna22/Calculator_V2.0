@@ -7,8 +7,8 @@ import android.widget.EditText;
 
 public class Converter extends AppCompatActivity {
 
-    private EditText Taka,Dollar,Feet,Inch,farhenheitEditText,celsiusEditText,Kg,Pound;
-    private String taka,dollar,feet,inch,ferhenheit,celsius,kg,pound;
+    private EditText Taka,Dollar,Feet,Inch,farhenheitEditText,celsiusEditText,Kg,Pound,Centimeter,Meter;
+    private String taka,dollar,feet,inch,ferhenheit,celsius,kg,pound,centimeter,meter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,9 @@ public class Converter extends AppCompatActivity {
         celsiusEditText=findViewById(R.id.celsiusEditText);
         Kg =findViewById(R.id.KgEditText) ;
         Pound = findViewById(R.id.PoundEditText);
+        Centimeter =findViewById(R.id.CentimeterEditText) ;
+        Meter = findViewById(R.id.MeterEditText);
+
 
 
         //  Taka - Dollar1
@@ -133,6 +136,35 @@ public class Converter extends AppCompatActivity {
 
             }
         });
+
+
+        Centimeter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                centimeter = Centimeter.getText().toString().trim();
+                try {
+                    Meter.setText((Double.parseDouble(centimeter)*100)+"");
+                } catch (NumberFormatException e) {
+
+                }
+
+            }
+        });
+        Meter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                meter = Meter.getText().toString().trim();
+                try {
+                    Centimeter.setText((Double.parseDouble(meter)*80)+"");
+                }
+                catch (NumberFormatException e) {
+
+                }
+            }
+        });
+
+
+
 
 
     }
