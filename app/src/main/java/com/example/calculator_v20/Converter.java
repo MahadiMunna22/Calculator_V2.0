@@ -143,7 +143,7 @@ public class Converter extends AppCompatActivity {
             public void onClick(View v) {
                 centimeter = Centimeter.getText().toString().trim();
                 try {
-                    Meter.setText((Double.parseDouble(centimeter)*100)+"");
+                    Meter.setText((Double.parseDouble(centimeter)/100)+"");
                 } catch (NumberFormatException e) {
 
                 }
@@ -155,7 +155,7 @@ public class Converter extends AppCompatActivity {
             public void onClick(View v) {
                 meter = Meter.getText().toString().trim();
                 try {
-                    Centimeter.setText((Double.parseDouble(meter)*80)+"");
+                    Centimeter.setText((Double.parseDouble(meter)*100)+"");
                 }
                 catch (NumberFormatException e) {
 
